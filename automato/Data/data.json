@@ -1,0 +1,19 @@
+{
+  "Estados": [
+    1,
+    2,
+    3
+  ],
+  "EstadoInicial": 1,
+  "EstadoFinal": 2,
+  "Transicoes": [
+    {
+      "EstadoOrigem": 1,
+      "EstadoDestino": 2,
+      "CarecteresAceitos": [
+        "a",
+        "b"
+      ]
+    }
+  ]
+}
