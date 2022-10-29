@@ -39,10 +39,10 @@ namespace automato
 
                 EstadoInicial.ForEach(x => destinos = ObterDestinos(x, item.ToString()));
 
-                var teste = new List<char>();
-                teste.Add(item);
+                var _caracteresAceitos = new List<char>();
+                _caracteresAceitos.Add(item);
                 
-                automatoAFD.Transicoes.Add(new TransicaoFD(EstadoInicial, destinos, teste));
+                automatoAFD.Transicoes.Add(new TransicaoFD(EstadoInicial, destinos, _caracteresAceitos));
                 automatoAFD.Estados.Add(destinos);
             }
 
@@ -60,8 +60,8 @@ namespace automato
                     foreach (var caractere in caracteres)
                     {
                         var destinos = new List<int>();
-                        var teste = new List<char>();
-                        teste.Add(caractere);
+                        var _caracteresAceitos = new List<char>();
+                        _caracteresAceitos.Add(caractere);
 
                         foreach (var destino in item.Destino)
                         {
@@ -79,7 +79,7 @@ namespace automato
                             automatoFD.Estados.Add(destinos);
 
                         }
-                        automatoFD.Transicoes.Add(new TransicaoFD(item.Destino, destinos, teste));
+                        automatoFD.Transicoes.Add(new TransicaoFD(item.Destino, destinos, _caracteresAceitos));
                     }
                 }
             }
