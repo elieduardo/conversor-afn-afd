@@ -4,13 +4,45 @@
     2,
     3
   ],
-  "EstadoInicial": 1,
-  "EstadoFinal": 2,
+  "EstadoInicial": [
+    1
+  ],
+  "EstadoFinal": 3,
   "Transicoes": [
     {
-      "EstadoOrigem": 1,
-      "EstadoDestino": 2,
-      "CarecteresAceitos": [
+      "Origem": 1,
+      "Destino": [
+        1
+      ],
+      "CaracteresAceitos": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "Origem": 1,
+      "Destino": [
+        2
+      ],
+      "CaracteresAceitos": [
+        "a"
+      ]
+    },
+    {
+      "Origem": 2,
+      "Destino": [
+        3
+      ],
+      "CaracteresAceitos": [
+        "a"
+      ]
+    },
+    {
+      "Origem": 3,
+      "Destino": [
+        3
+      ],
+      "CaracteresAceitos": [
         "a",
         "b"
       ]
