@@ -37,17 +37,17 @@
 
         public void AceitaPalava(string palavra)
         {
-            var caracteres = palavra.Split(";");
+            var caracteres = palavra.ToCharArray();
             var estadoAtivo = new List<int>();
             for (int i = 0; i < caracteres.Length; i++)
             {
                 if (i == 0)
                 {
-                    estadoAtivo = ObterDestino(EstadoInicial, caracteres[i]);
+                    estadoAtivo = ObterDestino(EstadoInicial, caracteres[i].ToString());
                 }
                 else
                 {
-                    estadoAtivo = ObterDestino(estadoAtivo, caracteres[i]);
+                    estadoAtivo = ObterDestino(estadoAtivo, caracteres[i].ToString());
 
                 }
             }

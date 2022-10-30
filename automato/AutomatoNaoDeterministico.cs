@@ -91,13 +91,13 @@ namespace automato
 
         public void AceitaPalava(string palavra)
         {
-            var caracteres = palavra.Split(";");
+            var caracteres = palavra.ToCharArray();
             var estadosAtivos = new List<int>();
             for (int i = 0; i < caracteres.Length; i++)
             {
                 if(i == 0)
                 {
-                    EstadoInicial.ForEach(x => estadosAtivos.AddRange(ObterDestinos(x, caracteres[0])));
+                    EstadoInicial.ForEach(x => estadosAtivos.AddRange(ObterDestinos(x, caracteres[0].ToString())));
                 }
                 else
                 {
@@ -105,7 +105,7 @@ namespace automato
 
                     foreach (var item in estadosAtivos)
                     {
-                        novosEstados.AddRange(ObterDestinos(item, caracteres[i]));
+                        novosEstados.AddRange(ObterDestinos(item, caracteres[i].ToString()));
                     }
 
                     estadosAtivos = novosEstados;
